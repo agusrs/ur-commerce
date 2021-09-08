@@ -1,7 +1,10 @@
-import { AppBar, List, ListItem, ListItemText, Tab, Tabs, Toolbar, Paper, Fade, Button } from '@material-ui/core'
+import { AppBar, List, ListItem, ListItemText, Tab, Tabs, Toolbar, Paper, Fade, Button, Grid, IconButton } from '@material-ui/core'
 import React, { useState } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
+import logo from '../utils/images/logoexample.png';
+import SearchIcon from '@material-ui/icons/Search';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -11,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
         position: 'fixed',
         zIndex: 1101
     },
+    toolbar: {
+        height: 50
+    }
 }));
 
 const ButtonLink = React.forwardRef((props, ref) => {
@@ -47,7 +53,7 @@ const ButtonLink = React.forwardRef((props, ref) => {
 
 const Header = ({ location }) => {
     const classes = useStyles();
-    
+
     const getValue = () => {
         switch (location.pathname) {
             case "/":
@@ -55,19 +61,34 @@ const Header = ({ location }) => {
             default:
                 return "/productos"
         }
-    } 
+    }
 
     return (
         <>
             <AppBar position="fixed" style={{ background: '#848484' }} >
                 <Toolbar className={classes.toolbar} >
-                    <Tabs value={getValue()} TabIndicatorProps={{ style: { backgroundColor: '#ffffff', pointerEvents: 'none' } }} >
-                        <Tab label="Inicio" value="/" component={Link} to='/' />
-                        <Tab label="Productos" value="/productos" component={ButtonLink} />
-                    </Tabs>
+                    <Grid container justifyContent="space-between" alignItems="center" direction="row" >
+                        <Grid item >
+                            <Tabs value={getValue()} TabIndicatorProps={{ style: { backgroundColor: '#ffffff', pointerEvents: 'none' } }} >
+                                <Tab label="Inicio" value="/" component={Link} to='/' />
+                                <Tab label="Productos" value="/productos" component={ButtonLink} />
+                            </Tabs>
+                        </Grid>
+                        <Grid item>
+                            <img src={logo} alt="Logo" />
+                        </Grid>
+                        <Grid item>
+                            <IconButton>
+                                <SearchIcon />
+                            </IconButton>
+                            <IconButton>
+                                <ShoppingCartIcon />
+                            </IconButton>
+                        </Grid>
+                    </Grid>
                 </Toolbar>
             </AppBar>
-            <Toolbar />
+            <Toolbar className={classes.toolbar} />
         </>
     )
 }
