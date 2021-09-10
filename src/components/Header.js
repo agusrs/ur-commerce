@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import logo from '../utils/images/logoexample.png';
-import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import SearchBar from './SearchBar';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -52,6 +52,7 @@ const ButtonLink = React.forwardRef((props, ref) => {
 });
 
 const Header = ({ location }) => {
+
     const classes = useStyles();
 
     const getValue = () => {
@@ -63,24 +64,24 @@ const Header = ({ location }) => {
         }
     }
 
+
+
     return (
         <>
             <AppBar position="fixed" style={{ background: '#848484' }} >
                 <Toolbar className={classes.toolbar} >
                     <Grid container justifyContent="space-between" alignItems="center" direction="row" >
-                        <Grid item >
+                        <Grid item lg={5} md={5} xs={5} >
                             <Tabs value={getValue()} TabIndicatorProps={{ style: { backgroundColor: '#ffffff', pointerEvents: 'none' } }} >
                                 <Tab label="Inicio" value="/" component={Link} to='/' />
                                 <Tab label="Productos" value="/productos" component={ButtonLink} />
                             </Tabs>
                         </Grid>
-                        <Grid item>
+                        <Grid item lg={2} md={2} xs={2} >
                             <img src={logo} alt="Logo" />
                         </Grid>
-                        <Grid item>
-                            <IconButton>
-                                <SearchIcon />
-                            </IconButton>
+                        <Grid item lg={5} md={5} xs={5} container justifyContent="flex-end" >
+                            <SearchBar />
                             <IconButton>
                                 <ShoppingCartIcon />
                             </IconButton>

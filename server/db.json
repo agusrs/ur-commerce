@@ -1,0 +1,46 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Buzo negro",
+            "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
+            "description": "De tela suave."
+        },
+        {
+            "id": 2,
+            "name": "Buzo amarillo",
+            "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
+            "description": "De tela suave."
+        },
+        {
+            "id": 3,
+            "name": "Remera gris",
+            "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
+            "description": "De tela suave."
+        },
+        {
+            "id": 4,
+            "name": "Campera negra",
+            "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
+            "description": "De tela suave."
+        },
+        {
+            "id": 5,
+            "name": "Remera naranja",
+            "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
+            "description": "De tela suave."
+        },
+        {
+            "id": 6,
+            "name": "Campera blanca",
+            "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
+            "description": "De tela suave."
+        },
+        {
+            "id": 7,
+            "name": "Buzo gris",
+            "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
+            "description": "De tela suave."
+        }
+    ]
+}
