@@ -1,10 +1,10 @@
-import { AppBar, List, ListItem, ListItemText, Tab, Tabs, Toolbar, Paper, Fade, Button, Grid, IconButton } from '@material-ui/core'
+import { AppBar, List, ListItem, ListItemText, Tab, Tabs, Toolbar, Paper, Fade, Button, Grid } from '@material-ui/core'
 import React, { useState } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import logo from '../utils/images/logoexample.png';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import SearchBar from './SearchBar';
+import ShoppingCart from './ShoppingCart';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -82,9 +82,7 @@ const Header = ({ location }) => {
                         </Grid>
                         <Grid item lg={5} md={5} xs={5} container justifyContent="flex-end" >
                             <SearchBar />
-                            <IconButton>
-                                <ShoppingCartIcon />
-                            </IconButton>
+                            <ShoppingCart />
                         </Grid>
                     </Grid>
                 </Toolbar>
