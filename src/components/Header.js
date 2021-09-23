@@ -64,11 +64,9 @@ const Header = ({ location }) => {
         }
     }
 
-
-
     return (
         <>
-            <AppBar position="fixed" style={{ background: '#848484' }} >
+            <AppBar position="fixed" style={{ background: '#595959' }} >
                 <Toolbar className={classes.toolbar} >
                     <Grid container justifyContent="space-between" alignItems="center" direction="row" >
                         <Grid item lg={5} md={5} xs={5} >
@@ -78,9 +76,11 @@ const Header = ({ location }) => {
                             </Tabs>
                         </Grid>
                         <Grid item lg={2} md={2} xs={2} >
-                            <img src={logo} alt="Logo" />
+                            <Link to="/" >
+                                <img src={logo} alt="Logo" />
+                            </Link>
                         </Grid>
-                        <Grid item lg={5} md={5} xs={5} container justifyContent="flex-end" >
+                        <Grid item lg={5} md={5} xs={5} container alignItems="center" justifyContent="flex-end" >
                             <SearchBar />
                             <ShoppingCart />
                         </Grid>

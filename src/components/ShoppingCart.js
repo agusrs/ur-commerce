@@ -9,7 +9,7 @@ const ShoppingCart = () => {
     return (
         <>
             <IconButton onClick={() => setOpenCart(true)} >
-                <ShoppingCartIcon />
+                <ShoppingCartIcon htmlColor="#ffffff" />
             </IconButton>
             <Drawer PaperProps={{style: {width: '30%'}}} anchor="right" open={openCart} onClose={() => setOpenCart(false)} >
                 <div>

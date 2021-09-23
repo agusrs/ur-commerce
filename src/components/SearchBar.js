@@ -8,21 +8,30 @@ const SearchBar = () => {
 
     const [search, setSearch] = useState(false)
     const [searchOptions, setSearchOptions] = useState([])
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [showButton, setShowButton] = useState(true)
 
-    const onClickSearch = () => {
+    const showAutoComplete = () => {
         if (!search) {
             setSearch(true)
             setShowButton(false)
         }
-        else {
-            alert("busco")
-        }
     }
 
-    const handleSearch = (event, value) => {
-
+    const handleSearch = (event) => {
+        setLoading(true)
+        fetch(`http://localhost:3001/products?q=${event.currentTarget.value}&_limit=10`)
+        .then((res) => {
+            res.json().then((data) => {
+                setSearchOptions(data)
+            })
+        })
+        .catch((err) => {
+            
+        })
+        .finally(() => {
+            setLoading(false)
+        })
     }
 
     return (
@@ -33,17 +42,18 @@ const SearchBar = () => {
                         id="searchbar"
                         options={searchOptions}
                         freeSolo
+                        size="small"
                         disableClearable={true}
                         multiple={false}
                         disabled={false}
                         getOptionSelected={(option, value) => option["name"] === value["name"]}
                         getOptionLabel={(option) => option["name"]}
-                        onChange={(event, value) => handleSearch(event, value)}
+                        onChange={(event, value) => alert("busca")}
                         style={{ width: 300 }}
                         loading={loading}
                         loadingText={loading ? <CircularProgress color="inherit" size={20} /> : null}
                         renderInput={(params) =>
-                            <TextField {...params} placeholder="Buscar..." autoFocus={true} variant="outlined"
+                            <TextField {...params} placeholder="Buscar..." autoFocus={true} onChange={(event) => handleSearch(event)} variant="outlined"
                                 InputProps={{
                                     ...params.InputProps,
                                     startAdornment: (
@@ -51,19 +61,21 @@ const SearchBar = () => {
                                             <IconButton
                                                 onClick={() => setSearch(false)}
                                                 edge="end"
+                                                size="small"
                                             >
-                                                <Close />
+                                                <Close htmlColor="#ffffff" />
                                             </IconButton>
                                         </InputAdornment>
                                     ),
                                     endAdornment: (
                                         <React.Fragment>
                                             {params.InputProps.endAdornment}
-                                            <InputAdornment position="ends">
+                                            <InputAdornment position="end">
                                                 <IconButton
-                                                    edge="end"
+                                                    edge="start"
+                                                    size="small"
                                                 >
-                                                    <SearchIcon />
+                                                    <SearchIcon htmlColor="#ffffff" />
                                                 </IconButton>
                                             </InputAdornment>
                                         </React.Fragment>
@@ -75,8 +87,8 @@ const SearchBar = () => {
                 </div>
             </Fade>
             {showButton &&
-                <IconButton onClick={() => onClickSearch()} >
-                    <SearchIcon />
+                <IconButton onClick={() => showAutoComplete()} >
+                    <SearchIcon htmlColor="#ffffff" />
                 </IconButton>
             }
         </>
