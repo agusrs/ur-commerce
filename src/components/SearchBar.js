@@ -19,19 +19,23 @@ const SearchBar = () => {
     }
 
     const handleSearch = (event) => {
-        setLoading(true)
-        fetch(`http://localhost:3001/products?q=${event.currentTarget.value}&_limit=10`)
-        .then((res) => {
-            res.json().then((data) => {
-                setSearchOptions(data)
+        if (event.target.value === '')
+            setSearchOptions([])
+        if (event.target.value.trim()) {
+            setLoading(true)
+            fetch(`http://localhost:3001/products?q=${event.currentTarget.value}&_limit=10`)
+            .then((res) => {
+                res.json().then((data) => {
+                    setSearchOptions(data)
+                })
             })
-        })
-        .catch((err) => {
-            
-        })
-        .finally(() => {
-            setLoading(false)
-        })
+            .catch((err) => {
+
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+        }
     }
 
     return (

@@ -8,19 +8,19 @@ function App() {
   return (
     <>
       <Router>
-        <Header/>
+        <Header />
         <Switch>
-            <Route exact path="/">
-              <Home/>
-            </Route>
-            <Route path="/productos">
-              Products
-            </Route>
-            <Route path="*">
-              404
-            </Route>
-          </Switch>
-          <Footer/>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/productos">
+            Products
+          </Route>
+          <Route path="*">
+            404
+          </Route>
+        </Switch>
+        <Footer />
       </Router>
     </>
   );

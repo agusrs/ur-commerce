@@ -4,43 +4,113 @@
             "id": 1,
             "name": "Buzo negro",
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
-            "description": "De tela suave."
+            "description": "De tela suave.",
+            "price": 1000,
+            "highlighted": true
         },
         {
             "id": 2,
             "name": "Buzo amarillo",
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
-            "description": "De tela suave."
+            "description": "De tela suave.",
+            "price": 1000,
+            "highlighted": false
         },
         {
             "id": 3,
             "name": "Remera gris",
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
-            "description": "De tela suave."
+            "description": "De tela suave.",
+            "price": 1000,
+            "highlighted": true
         },
         {
             "id": 4,
             "name": "Campera negra",
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
-            "description": "De tela suave."
+            "description": "De tela suave.",
+            "price": 1000,
+            "highlighted": false
         },
         {
             "id": 5,
             "name": "Remera naranja",
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
-            "description": "De tela suave."
+            "description": "De tela suave.",
+            "price": 1000,
+            "highlighted": true
         },
         {
             "id": 6,
             "name": "Campera blanca",
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
-            "description": "De tela suave."
+            "description": "De tela suave.",
+            "price": 1000,
+            "highlighted": false
         },
         {
             "id": 7,
-            "name": "Buzo gris",
+            "name": "Remera blanca",
+            "stock": [{"m":1}, {"l": 0}, {"xl": 0}],
+            "description": "De tela suave.",
+            "price": 1000,
+            "highlighted": true
+        },
+        {
+            "id": 8,
+            "name": "Campera roja",
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
-            "description": "De tela suave."
+            "description": "De tela suave.",
+            "price": 1000,
+            "highlighted": false
+        },
+        {
+            "id": 9,
+            "name": "Campera gris",
+            "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
+            "description": "De tela suave.",
+            "price": 1000,
+            "highlighted": true
+        },
+        {
+            "id": 10,
+            "name": "Buzo violeta",
+            "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
+            "description": "De tela suave.",
+            "price": 1000,
+            "highlighted": false
+        },
+        {
+            "id": 11,
+            "name": "Remera slim",
+            "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
+            "description": "De tela suave.",
+            "price": 1000,
+            "highlighted": true
+        },
+        {
+            "id": 12,
+            "name": "Buzo jb",
+            "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
+            "description": "De tela suave.",
+            "price": 1000,
+            "highlighted": true
+        },
+        {
+            "id": 13,
+            "name": "Remera amarilla",
+            "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
+            "description": "De tela suave.",
+            "price": 1000,
+            "highlighted": false
+        },
+        {
+            "id": 14,
+            "name": "Campera tres tiras",
+            "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
+            "description": "De tela suave.",
+            "price": 1000,
+            "highlighted": true
         }
     ]
 }
