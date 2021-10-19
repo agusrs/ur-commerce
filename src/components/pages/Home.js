@@ -4,6 +4,7 @@ import HomeCarousel from '../HomeCarousel'
 import PageContainer from '../PageContainer'
 import api from "../../apis/apiProducts"
 import ProductList from '../ProductList'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 
@@ -37,9 +38,9 @@ const Home = () => {
                 <Grid item xs={12} >
                     <ProductList products={highlightedProducts} />
                 </Grid>
-                <Grid item xs={12} >
-                    <Button variant="contained" size="large" >Todos los productos</Button>
-                </Grid>
+            </Grid>
+            <Grid container item direction="row"  xs={12} justifyContent="center" >
+                <Button to="/productos" component={Link} variant="contained" size="large" >Todos los productos</Button>
             </Grid>
         </PageContainer>
     )
