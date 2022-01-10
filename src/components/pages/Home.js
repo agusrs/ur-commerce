@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from '@material-ui/core'
+import { Button, Grid, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import HomeCarousel from '../HomeCarousel'
 import PageContainer from '../PageContainer'

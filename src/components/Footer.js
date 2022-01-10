@@ -1,7 +1,7 @@
-import { Grid, IconButton, Typography } from '@material-ui/core'
+import { Grid, IconButton, Typography } from '@mui/material'
 import React from 'react'
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const Footer = () => {
     return (

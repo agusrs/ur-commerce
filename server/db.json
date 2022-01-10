@@ -6,7 +6,8 @@
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
             "description": "De tela suave.",
             "price": 1000,
-            "highlighted": true
+            "highlighted": true,
+            "category": "buzos"
         },
         {
             "id": 2,
@@ -14,7 +15,8 @@
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
             "description": "De tela suave.",
             "price": 1000,
-            "highlighted": false
+            "highlighted": false,
+            "category": "buzos"
         },
         {
             "id": 3,
@@ -22,7 +24,8 @@
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
             "description": "De tela suave.",
             "price": 1000,
-            "highlighted": true
+            "highlighted": true,
+            "category": "remeras"
         },
         {
             "id": 4,
@@ -30,7 +33,8 @@
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
             "description": "De tela suave.",
             "price": 1000,
-            "highlighted": false
+            "highlighted": false,
+            "category": "camperas"
         },
         {
             "id": 5,
@@ -38,7 +42,8 @@
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
             "description": "De tela suave.",
             "price": 1000,
-            "highlighted": true
+            "highlighted": true,
+            "category": "remeras"
         },
         {
             "id": 6,
@@ -46,7 +51,8 @@
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
             "description": "De tela suave.",
             "price": 1000,
-            "highlighted": false
+            "highlighted": false,
+            "category": "camperas"
         },
         {
             "id": 7,
@@ -54,7 +60,8 @@
             "stock": [{"m":1}, {"l": 0}, {"xl": 0}],
             "description": "De tela suave.",
             "price": 1000,
-            "highlighted": true
+            "highlighted": true,
+            "category": "remeras"
         },
         {
             "id": 8,
@@ -62,7 +69,8 @@
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
             "description": "De tela suave.",
             "price": 1000,
-            "highlighted": false
+            "highlighted": false,
+            "category": "camperas"
         },
         {
             "id": 9,
@@ -70,7 +78,8 @@
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
             "description": "De tela suave.",
             "price": 1000,
-            "highlighted": true
+            "highlighted": true,
+            "category": "camperas"
         },
         {
             "id": 10,
@@ -78,7 +87,8 @@
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
             "description": "De tela suave.",
             "price": 1000,
-            "highlighted": false
+            "highlighted": false,
+            "category": "buzos"
         },
         {
             "id": 11,
@@ -86,7 +96,8 @@
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
             "description": "De tela suave.",
             "price": 1000,
-            "highlighted": true
+            "highlighted": true,
+            "category": "remeras"
         },
         {
             "id": 12,
@@ -94,7 +105,8 @@
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
             "description": "De tela suave.",
             "price": 1000,
-            "highlighted": true
+            "highlighted": true,
+            "category": "buzos"
         },
         {
             "id": 13,
@@ -102,7 +114,8 @@
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
             "description": "De tela suave.",
             "price": 1000,
-            "highlighted": false
+            "highlighted": false,
+            "category": "remeras"
         },
         {
             "id": 14,
@@ -110,7 +123,8 @@
             "stock": [{"m":5}, {"l": 10}, {"xl": 0}],
             "description": "De tela suave.",
             "price": 1000,
-            "highlighted": true
+            "highlighted": true,
+            "category": "camperas"
         }
     ]
 }

@@ -1,7 +1,7 @@
-import { AppBar, List, ListItem, ListItemText, Tab, Tabs, Toolbar, Paper, Fade, Button, Grid } from '@material-ui/core'
+import { AppBar, List, ListItem, ListItemText, Tab, Tabs, Toolbar, Paper, Fade, Button, Grid } from '@mui/material'
 import React, { useState } from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/styles';
 import logo from '../utils/images/logoexample.png';
 import SearchBar from './SearchBar';
 import ShoppingCart from './ShoppingCart';
@@ -71,8 +71,8 @@ const Header = ({ location }) => {
                     <Grid container justifyContent="space-between" alignItems="center" direction="row" >
                         <Grid item lg={5} md={5} xs={5} >
                             <Tabs value={getValue()} TabIndicatorProps={{ style: { backgroundColor: '#ffffff', pointerEvents: 'none' } }} >
-                                <Tab label="Inicio" value="/" component={Link} to='/' />
-                                <Tab label="Productos" value="/productos" component={ButtonLink} />
+                                <Tab label="Inicio" value="/" component={Link} to='/' style={{color: '#ffffff'}} />
+                                <Tab label="Productos" value="/productos" style={{color: '#ffffff'}} component={ButtonLink} />
                             </Tabs>
                         </Grid>
                         <Grid item lg={2} md={2} xs={2} >

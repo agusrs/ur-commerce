@@ -1,10 +1,12 @@
-import { CircularProgress, IconButton, InputAdornment, Fade, TextField } from '@material-ui/core';
-import React, { useState } from 'react'
-import SearchIcon from '@material-ui/icons/Search';
-import { Autocomplete } from '@material-ui/lab';
-import Close from '@material-ui/icons/Close';
+import { CircularProgress, IconButton, InputAdornment, Fade, TextField } from '@mui/material';
+import React, { useState } from 'react';
+import { withRouter } from "react-router-dom";
+import SearchIcon from '@mui/icons-material/Search';
+import { Autocomplete } from '@mui/material';
+import Close from '@mui/icons-material/Close';
+import api from "../apis/apiProducts";
 
-const SearchBar = () => {
+const SearchBar = ({ history }) => {
 
     const [search, setSearch] = useState(false)
     const [searchOptions, setSearchOptions] = useState([])
@@ -23,11 +25,9 @@ const SearchBar = () => {
             setSearchOptions([])
         if (event.target.value.trim()) {
             setLoading(true)
-            fetch(`http://localhost:3001/products?q=${event.currentTarget.value}&_limit=10`)
+            api.get(`?q=${event.currentTarget.value}&_limit=10`)
             .then((res) => {
-                res.json().then((data) => {
-                    setSearchOptions(data)
-                })
+                setSearchOptions(res.data)
             })
             .catch((err) => {
 
@@ -36,6 +36,10 @@ const SearchBar = () => {
                 setLoading(false)
             })
         }
+    }
+
+    const itemSelected = (evt, value) => {
+        history.push(`/productos/${value?.name}`.replace(/\s+/g, '-').toLowerCase())
     }
 
     return (
@@ -52,7 +56,7 @@ const SearchBar = () => {
                         disabled={false}
                         getOptionSelected={(option, value) => option["name"] === value["name"]}
                         getOptionLabel={(option) => option["name"]}
-                        onChange={(event, value) => alert("busca")}
+                        onChange={(event, value) => itemSelected(event,value)}
                         style={{ width: 300 }}
                         loading={loading}
                         loadingText={loading ? <CircularProgress color="inherit" size={20} /> : null}
@@ -99,4 +103,4 @@ const SearchBar = () => {
     )
 }
 
-export default SearchBar
+export default withRouter(SearchBar)

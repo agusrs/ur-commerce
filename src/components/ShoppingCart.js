@@ -1,5 +1,5 @@
-import { Drawer, IconButton } from '@material-ui/core'
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { Drawer, IconButton } from '@mui/material'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import React, { useState } from 'react'
 
 const ShoppingCart = () => {
