@@ -8,6 +8,7 @@ import ProductList from '../ProductList'
 import api from "../../apis/apiProducts"
 import { withRouter } from 'react-router'
 import { useParams } from 'react-router-dom'
+import Filters from '../Filters'
 
 const Products = () => {
 
@@ -19,7 +20,7 @@ const Products = () => {
     }, [urlProduct])
 
     const getProducts = (urlProduct) => {
-        api.get(`?${urlProduct.id ? 'category=' + urlProduct.id + '&' : ''}_limit=20`)
+        api.get(`?${urlProduct.category ? 'category=' + urlProduct.category + '&' : ''}_limit=20`)
         .then((res) => {
             setProducts(res.data)
         })
@@ -36,15 +37,15 @@ const Products = () => {
                 </Grid>
                 <Grid item>
                     <Typography variant='h4' >
-                        {urlProduct.id ? urlProduct.id.charAt(0).toUpperCase() + urlProduct.id.slice(1) : 'Productos'}
+                        {urlProduct.category ? urlProduct.category.charAt(0).toUpperCase() + urlProduct.category.slice(1) : 'Productos'}
                     </Typography>
                 </Grid>
                 <Grid item >
-                    <Grid container direction='row'>
-                        <Grid item xs >
-                            Filters
+                    <Grid container spacing={2} direction='row'>
+                        <Grid item xs={2} >
+                            <Filters />
                         </Grid>
-                        <Grid item xs >
+                        <Grid item xs={10} >
                             <ProductList products={products} />
                         </Grid>
                     </Grid>

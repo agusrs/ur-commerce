@@ -5,6 +5,22 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Autocomplete } from '@mui/material';
 import Close from '@mui/icons-material/Close';
 import api from "../apis/apiProducts";
+import { styled } from "@mui/material/styles";
+
+const StyledAutocomplete = styled(Autocomplete)({
+    "& .MuiAutocomplete-inputRoot": {
+      color: "white",
+      // "& .MuiOutlinedInput-notchedOutline": {
+      //   borderColor: "green"
+      // },
+      // "&:hover .MuiOutlinedInput-notchedOutline": {
+      //   borderColor: "red"
+      // },
+      "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+        borderColor: "white"
+      }
+    }
+  });
 
 const SearchBar = ({ history }) => {
 
@@ -46,7 +62,7 @@ const SearchBar = ({ history }) => {
         <>
             <Fade in={search} timeout={search ? 500 : 500} onExited={() => setShowButton(true)} mountOnEnter unmountOnExit >
                 <div>
-                    <Autocomplete
+                    <StyledAutocomplete
                         id="searchbar"
                         options={searchOptions}
                         freeSolo

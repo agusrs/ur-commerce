@@ -32,13 +32,13 @@ const ButtonLink = React.forwardRef((props, ref) => {
                         <ListItem button component={Link} to="/productos" >
                             <ListItemText primary="Todos los productos" />
                         </ListItem>
-                        <ListItem button component={Link} to="/productos/camperas" >
+                        <ListItem button component={Link} to="/camperas" >
                             <ListItemText primary="Camperas" />
                         </ListItem>
-                        <ListItem button component={Link} to="/productos/buzos" >
+                        <ListItem button component={Link} to="/buzos" >
                             <ListItemText primary="Buzos" />
                         </ListItem>
-                        <ListItem button component={Link} to="/productos/remeras" >
+                        <ListItem button component={Link} to="/remeras" >
                             <ListItemText primary="Remeras" />
                         </ListItem>
                         <ListItem button component={Link} to="/sale" >
